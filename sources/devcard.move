@@ -4,7 +4,7 @@ module devhub::devcard {
     use sui::transfer;
     use sui::object::{Self, UID, ID};
     use sui::tx_context:: {Self, TxContext};
-    use sui::url::{Self,Url}；
+    use sui::url::{Self,Url};
     use sui::coin::{Self, Coin};
     use sui::sui::SUI; 
     use sui::object_table::{Self, ObjectTable};
@@ -14,7 +14,7 @@ module devhub::devcard {
     const INSUFFICIENT_FUNDS: u64 = 1;
     const MIN_CARD_COST: u64 = 1;
 
-    struct DevCard, has key, store {
+    struct DevCard has key, store {
         id: UID,
         name: String,
         owner: address,
